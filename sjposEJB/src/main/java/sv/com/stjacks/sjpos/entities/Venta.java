@@ -56,13 +56,13 @@ public class Venta implements Serializable {
     @Column(name = "monto_vta")
     private double montoVta;
     
-    @OneToMany(targetEntity=ProductoVenta.class, cascade = CascadeType.ALL, mappedBy = "Venta")
+    @OneToMany(targetEntity=ProductoVenta.class, cascade = CascadeType.ALL, mappedBy = "venta")
     private List<ProductoVenta> productoVentaList;
     
-    @OneToMany(targetEntity=PromocionVenta.class, cascade = CascadeType.ALL, mappedBy = "Venta")
+    @OneToMany(targetEntity=PromocionVenta.class, cascade = CascadeType.ALL, mappedBy = "venta")
     private List<PromocionVenta> promocionVentaList;
     
-    @OneToMany(targetEntity=Cambio.class, cascade = CascadeType.ALL, mappedBy = "Venta")
+    @OneToMany(targetEntity=Cambio.class, cascade = CascadeType.ALL, mappedBy = "venta")
     private List<Cambio> cambioList;
     
     @JoinColumn(name = "id_caja", referencedColumnName = "id_caja")

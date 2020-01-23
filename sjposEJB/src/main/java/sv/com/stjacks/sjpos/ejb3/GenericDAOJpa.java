@@ -1,7 +1,6 @@
 package sv.com.stjacks.sjpos.ejb3;
 
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

@@ -3,6 +3,7 @@ package sv.com.stjacks.sjpos.entities;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -55,29 +56,29 @@ public class Tienda implements Serializable {
 	@Column(name="telefono_tda", nullable=false, length=15)
 	private String telefonoTda;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<TipoDocumentoTienda> tipoDocumentoTiendaList;
 	
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<FormaPagoTienda> formaPagoTiendaList;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<Pedido> pedidoList;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTiendaOrigenTrf")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tiendaOrigenTrf")
     private List<Transferencia> transferenciaListGenerada;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTiendaDestinoTrf")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tiendaDestinoTrf")
     private List<Transferencia> transferenciaListRecibida;
     
     @JoinColumn(name = "id_pais", referencedColumnName = "id_pais", nullable = false)
     @ManyToOne(optional = false)
     private Pais idPais;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<Ingreso> ingresoList;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<Caja> cajaList;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")

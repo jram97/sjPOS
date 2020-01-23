@@ -1,4 +1,4 @@
-package sv.com.stjacks.entities;
+package sv.com.stjacks.sjpos.entities;
 
 import java.io.Serializable;
 import java.util.Date;

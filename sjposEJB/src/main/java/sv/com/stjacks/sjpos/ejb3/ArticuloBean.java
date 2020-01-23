@@ -14,8 +14,6 @@ import sv.com.stjacks.sjpos.entities.Articulo;
 @LocalBean
 public class ArticuloBean extends GenericDAOJpa<Articulo, Integer> implements ArticuloBeanRemote, ArticuloBeanLocal {
 
-	@PersistenceContext(unitName = "sjPOSEJB")
-	private EntityManager em;
 	
     /**
      * Default constructor. 
