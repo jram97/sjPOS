@@ -1,4 +1,4 @@
-package sv.com.sjacks.sjpos.entities;
+package sv.com.stjacks.sjpos.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,7 +14,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import sv.com.sjacks.sjPOSEJB.Entity.Tienda;
+import sv.com.stjacks.sjpos.entities.Tienda;
 
 /**
  *

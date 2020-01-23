@@ -1,4 +1,4 @@
-package sv.com.sjacks.sjpos.entities;
+package sv.com.stjacks.sjpos.entities;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -12,7 +12,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 /**
  *

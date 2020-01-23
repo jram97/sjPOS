@@ -32,35 +32,45 @@ public class TipoDocumentoTienda implements Serializable {
     public TipoDocumentoTienda() {
     }
 
-    public TipoDocumentoTienda(Integer idTipoDocumentoTienda) {
-        this.idTipoDocumentoTienda = idTipoDocumentoTienda;
-    }
-
+    
+    
     public Integer getIdTipoDocumentoTienda() {
-        return idTipoDocumentoTienda;
-    }
+		return idTipoDocumentoTienda;
+	}
 
-    public void setIdTipoDocumentoTienda(Integer idTipoDocumentoTienda) {
-        this.idTipoDocumentoTienda = idTipoDocumentoTienda;
-    }
 
-    public Tienda getIdTienda() {
-        return idTienda;
-    }
 
-    public void setIdTienda(Tienda idTienda) {
-        this.idTienda = idTienda;
-    }
+	public void setIdTipoDocumentoTienda(Integer idTipoDocumentoTienda) {
+		this.idTipoDocumentoTienda = idTipoDocumentoTienda;
+	}
 
-    public TipoDocumento getIdTipoDocumento() {
-        return idTipoDocumento;
-    }
 
-    public void setIdTipoDocumento(TipoDocumento idTipoDocumento) {
-        this.idTipoDocumento = idTipoDocumento;
-    }
 
-    @Override
+	public Tienda getTienda() {
+		return tienda;
+	}
+
+
+
+	public void setTienda(Tienda tienda) {
+		this.tienda = tienda;
+	}
+
+
+
+	public TipoDocumento getIdTipoDocumento() {
+		return idTipoDocumento;
+	}
+
+
+
+	public void setIdTipoDocumento(TipoDocumento idTipoDocumento) {
+		this.idTipoDocumento = idTipoDocumento;
+	}
+
+
+
+	@Override
     public int hashCode() {
         int hash = 0;
         hash += (idTipoDocumentoTienda != null ? idTipoDocumentoTienda.hashCode() : 0);

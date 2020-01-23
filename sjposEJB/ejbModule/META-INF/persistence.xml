@@ -27,6 +27,10 @@
 		<class>sv.com.stjacks.sjpos.entities.PromocionVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.Usuario</class>
 		<class>sv.com.stjacks.sjpos.entities.Venta</class>
+		<class>sv.com.stjacks.sjpos.entities.Transferencia</class>
+		<class>sv.com.stjacks.sjpos.entities.Pedido</class>
+		<class>sv.com.stjacks.sjpos.entities.Ingreso</class>
+
 		<properties>
 			<property name="hibernate.connection.pool_size" value="1"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>

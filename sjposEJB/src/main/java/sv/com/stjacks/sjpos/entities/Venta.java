@@ -85,9 +85,8 @@ public class Venta implements Serializable {
     @ManyToOne(optional = false)
     private TipoVenta tipoVenta;
     
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
-    @ManyToOne(optional = false)
-    private Usuario usuario;
+    @Column(name = "id_usuario")
+    private int usuario;
 
     public Venta() {
     }
@@ -202,11 +201,11 @@ public class Venta implements Serializable {
         this.tipoVenta = idTipoVenta;
     }
 
-    public Usuario getIdUsuario() {
+    public int getIdUsuario() {
         return usuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         this.usuario = idUsuario;
     }
 

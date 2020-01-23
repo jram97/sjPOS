@@ -2,6 +2,9 @@ package sv.com.stjacks.sjpos.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import sv.com.stjacks.sjpos.entities.Pedido;
+
 import java.util.Date;
 import java.util.List;
 
@@ -62,20 +65,20 @@ public class Tienda implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<FormaPagoTienda> formaPagoTiendaList;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
     private List<Pedido> pedidoList;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tiendaOrigenTrf")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTiendaOrigenTrf")
     private List<Transferencia> transferenciaListGenerada;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tiendaDestinoTrf")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTiendaDestinoTrf")
     private List<Transferencia> transferenciaListRecibida;
     
     @JoinColumn(name = "id_pais", referencedColumnName = "id_pais", nullable = false)
     @ManyToOne(optional = false)
     private Pais idPais;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
     private List<Ingreso> ingresoList;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
