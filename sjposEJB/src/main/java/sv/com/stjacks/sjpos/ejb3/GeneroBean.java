@@ -17,12 +17,6 @@ import sv.com.stjacks.sjpos.entities.Genero;
 @LocalBean
 public class GeneroBean extends GenericDAOJpa<Genero, Integer> implements GeneroBeanRemote, GeneroBeanLocal {
 
-	@PersistenceContext(unitName = "sjPOSEJB", type = PersistenceContextType.EXTENDED)
-	private EntityManager em;
-	
-    /**
-     * Default constructor. 
-     */
     public GeneroBean() {
         // TODO Auto-generated constructor stub
     }

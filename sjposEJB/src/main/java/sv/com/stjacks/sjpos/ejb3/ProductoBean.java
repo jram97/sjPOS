@@ -1,22 +1,17 @@
-package sv.com.stjacks.ejb3;
+package sv.com.stjacks.sjpos.ejb3;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
-import sv.com.stjacks.entities.Producto;
-
+import sv.com.stjacks.sjpos.entities.Producto;
 /**
- * Session Bean implementation class ProductoBean
- */
+*
+* @author Alex Enrique Lemus Guzmán
+*/
 @Stateless
-public class ProductoBean extends GenericDAO<Producto, Integer> implements ProductoBeanRemote, ProductoBeanLocal {
-       
-	@PersistenceContext(unitName="sjPOSEJB")
-	private EntityManager em;
-	
+public class ProductoBean extends GenericDAOJpa<Producto, Integer> implements ProductoBeanRemote, ProductoBeanLocal {
+
     public ProductoBean() {
-        super(Producto.class);
+
     }
 
 }

@@ -14,14 +14,8 @@ import sv.com.stjacks.sjpos.entities.TipoDocumentoTienda;
 @LocalBean
 public class TipoDocumentoTiendaBean extends GenericDAOJpa<TipoDocumentoTienda, Integer> implements TipoDocumentoTiendaBeanRemote, TipoDocumentoTiendaBeanLocal {
 
-	@PersistenceContext(unitName = "sjPOSEJB")
-	private EntityManager em;
-	
-    /**
-     * Default constructor. 
-     */
     public TipoDocumentoTiendaBean() {
-        // TODO Auto-generated constructor stub
+
     }
 
 }

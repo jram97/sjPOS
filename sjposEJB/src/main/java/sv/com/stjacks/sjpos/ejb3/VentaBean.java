@@ -1,22 +1,17 @@
-package sv.com.stjacks.ejb3;
+package sv.com.stjacks.sjpos.ejb3;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
-import sv.com.stjacks.entities.Venta;
-
+import sv.com.stjacks.sjpos.entities.Venta;
 /**
- * Session Bean implementation class VentaBean
- */
+*
+* @author Alex Enrique Lemus Guzmán
+*/
 @Stateless
-public class VentaBean extends GenericDAO<Venta, Integer> implements VentaBeanRemote, VentaBeanLocal {
-	
-	@PersistenceContext(unitName="sjPOSEJB")
-	private EntityManager em;
+public class VentaBean extends GenericDAOJpa<Venta, Integer> implements VentaBeanRemote, VentaBeanLocal {
 
     public VentaBean() {
-        super(Venta.class);
+        
     }
 
 }
