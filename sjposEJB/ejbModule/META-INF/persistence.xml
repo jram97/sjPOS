@@ -9,6 +9,7 @@
 		<class>sv.com.stjacks.sjpos.entities.Articulo</class>
 		<class>sv.com.stjacks.sjpos.entities.Genero</class>
 		<class>sv.com.stjacks.sjpos.entities.ProductoTienda</class>
+		<class>sv.com.stjacks.sjpos.entities.ProductoVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoDocumentoTienda</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoDocumento</class>
