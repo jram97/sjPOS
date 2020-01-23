@@ -88,7 +88,7 @@ public class Producto implements Serializable {
     @OneToMany(targetEntity=ProductoIngreso.class, cascade = CascadeType.ALL, mappedBy = "Producto")
     private List<ProductoIngreso> productoIngresoList;
     
-    @OneToMany(targetEntity=ProductoTienda.class, cascade = CascadeType.ALL, mappedBy = "Producto")
+    @OneToMany(targetEntity=ProductoTienda.class, cascade = CascadeType.ALL, mappedBy = "idProducto")
     private List<ProductoTienda> productoTiendaList;
 
     public Producto() {

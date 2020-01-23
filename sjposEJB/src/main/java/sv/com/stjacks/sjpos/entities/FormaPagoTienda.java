@@ -35,27 +35,28 @@ public class FormaPagoTienda implements Serializable {
 	}
 
 	public Integer getIdFormaPagoTienda() {
-		return this.idFormaPagoTienda;
+		return idFormaPagoTienda;
 	}
 
 	public void setIdFormaPagoTienda(Integer idFormaPagoTienda) {
 		this.idFormaPagoTienda = idFormaPagoTienda;
 	}
 
-	public Integer getIdFormaPago() {
-		return this.idFormaPago;
+	public FormaPago getFormaPago() {
+		return formaPago;
 	}
 
-	public void setIdFormaPago(Integer idFormaPago) {
-		this.idFormaPago = idFormaPago;
+	public void setFormaPago(FormaPago formaPago) {
+		this.formaPago = formaPago;
 	}
 
-	public Integer getIdTienda() {
-		return this.idTienda;
+	public Tienda getTienda() {
+		return tienda;
 	}
 
-	public void setIdTienda(Integer idTienda) {
-		this.idTienda = idTienda;
+	public void setTienda(Tienda tienda) {
+		this.tienda = tienda;
 	}
+
 
 }

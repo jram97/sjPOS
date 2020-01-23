@@ -54,7 +54,7 @@ public class Marca implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fechaRegistroMca;
     
-    @OneToMany(targetEntity=Articulo.class, cascade = CascadeType.ALL, mappedBy = "Marca")
+    @OneToMany(targetEntity=Articulo.class, cascade = CascadeType.ALL, mappedBy = "idMarca")
     private List<Articulo> articuloList;
 
     public Marca() {
@@ -119,22 +119,5 @@ public class Marca implements Serializable {
         return hash;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Marca)) {
-            return false;
-        }
-        Marca other = (Marca) object;
-        if ((this.idMarca == null && other.idMarca != null) || (this.idMarca != null && !this.idMarca.equals(other.idMarca))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.Marca[ idMarca=" + idMarca + " ]";
-    }
     
 }
