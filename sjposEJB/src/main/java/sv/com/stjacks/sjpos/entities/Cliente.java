@@ -55,7 +55,7 @@ public class Cliente implements Serializable {
 	@Column(name="telefono_cli", nullable=false, length=15)
 	private String telefonoCli;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
     private List<ClientePromocion> clientePromocionList;
 	
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
