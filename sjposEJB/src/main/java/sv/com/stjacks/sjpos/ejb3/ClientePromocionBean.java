@@ -1,21 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package EJB;
+package sv.com.stjacks.sjpos.ejb3;
 
-import entities.ClientePromocion;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import sv.com.stjacks.sjpos.entities.ClientePromocion;
 
 /**
  *
  * @author aguzman
  */
 @Stateless
-public class ClientePromocionFacade extends AbstractFacade<ClientePromocion> implements ClientePromocionFacadeLocal {
+public class ClientePromocionBean extends GenericDAOJpa<ClientePromocion, Integer> implements ClientePromocionFacadeLocal {
 
     @PersistenceContext(unitName = "sjPOSEJBPU")
     private EntityManager em;

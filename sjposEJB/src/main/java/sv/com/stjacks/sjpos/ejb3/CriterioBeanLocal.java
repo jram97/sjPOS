@@ -1,20 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package EJB;
+package sv.com.stjacks.sjpos.ejb3;
 
-import entities.Criterio;
+
 import java.util.List;
 import javax.ejb.Local;
+
+import sv.com.stjacks.sjpos.entities.Criterio;
 
 /**
  *
  * @author aguzman
  */
 @Local
-public interface CriterioFacadeLocal {
+public interface CriterioBeanLocal {
 
     void create(Criterio criterio);
 

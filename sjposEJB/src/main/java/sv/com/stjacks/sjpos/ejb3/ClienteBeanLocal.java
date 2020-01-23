@@ -1,20 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package EJB;
+package sv.com.stjacks.sjpos.ejb3;
 
-import entities.Cliente;
 import java.util.List;
 import javax.ejb.Local;
+
+import sv.com.stjacks.sjpos.entities.Cliente;
 
 /**
  *
  * @author aguzman
  */
 @Local
-public interface ClienteFacadeLocal {
+public interface ClienteBeanLocal {
 
     void create(Cliente cliente);
 
@@ -25,8 +21,6 @@ public interface ClienteFacadeLocal {
     Cliente find(Object id);
 
     List<Cliente> findAll();
-
-    List<Cliente> findRange(int[] range);
 
     int count();
     

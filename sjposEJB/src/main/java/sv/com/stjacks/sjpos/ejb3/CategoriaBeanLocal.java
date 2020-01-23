@@ -1,20 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package EJB;
+package sv.com.stjacks.sjpos.ejb3;
 
-import entities.Categoria;
 import java.util.List;
 import javax.ejb.Local;
+
+import sv.com.stjacks.sjpos.entities.Categoria;
 
 /**
  *
  * @author aguzman
  */
 @Local
-public interface CategoriaFacadeLocal {
+public interface CategoriaBeanLocal {
 
     void create(Categoria categoria);
 

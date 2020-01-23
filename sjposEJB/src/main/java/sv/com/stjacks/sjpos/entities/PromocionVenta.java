@@ -40,7 +40,7 @@ public class PromocionVenta implements Serializable {
 
     @JoinColumn(name = "id_venta", referencedColumnName = "id_venta")
     @ManyToOne(optional = false)
-    private Venta idVenta;
+    private Venta venta;
 
     public PromocionVenta() {
     }

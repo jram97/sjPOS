@@ -1,21 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package EJB;
+package sv.com.stjacks.sjpos.ejb3;
 
-import entities.FormaPago;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import sv.com.stjacks.sjpos.entities.FormaPago;
 
 /**
  *
  * @author aguzman
  */
 @Stateless
-public class FormaPagoFacade extends AbstractFacade<FormaPago> implements FormaPagoFacadeLocal {
+public class FormaPagoBean extends GenericDAOJpa<FormaPago, Integer> implements FormaPagoFacadeLocal {
 
     @PersistenceContext(unitName = "sjPOSEJBPU")
     private EntityManager em;
