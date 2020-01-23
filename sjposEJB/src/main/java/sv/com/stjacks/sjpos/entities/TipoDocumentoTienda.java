@@ -23,7 +23,7 @@ public class TipoDocumentoTienda implements Serializable {
 
     @JoinColumn(name = "id_tienda", referencedColumnName = "id_tienda")
     @ManyToOne(optional = false)
-    private Tienda idTienda;
+    private Tienda tienda;
     
     @JoinColumn(name = "id_tipo_documento", referencedColumnName = "id_tipo_documento")
     @ManyToOne(optional = false)

@@ -57,7 +57,7 @@ public class Articulo implements Serializable {
     @ManyToOne(optional = false)
     private Marca idMarca;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idArticulo")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "articulo")
     private List<Producto> productoList;
 
     public Articulo() {

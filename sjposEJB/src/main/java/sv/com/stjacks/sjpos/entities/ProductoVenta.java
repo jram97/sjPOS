@@ -39,15 +39,15 @@ public class ProductoVenta implements Serializable {
 
 	@JoinColumn(name = "id_producto_tienda", referencedColumnName = "id_producto_tienda", nullable = false)
 	@ManyToOne(optional = false)
-	private ProductoTienda idProductoTienda;
+	private ProductoTienda productoTienda;
 	
 	@JoinColumn(name = "id_promicion", referencedColumnName = "id_promocion")
 	@ManyToOne
-	private Promocion idPromicion;
+	private Promocion promicion;
 	
 	@JoinColumn(name = "id_venta", referencedColumnName = "id_venta", nullable = false)
 	@ManyToOne(optional = false)
-	private Venta idVenta;
+	private Venta venta;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idProductoVenta")
 	private List<ProductoCambio> productoCambioList;

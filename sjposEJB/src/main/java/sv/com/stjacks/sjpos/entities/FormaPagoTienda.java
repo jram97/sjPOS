@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NamedQueries({
 	@NamedQuery(name="FormaPagoTienda.findAll", query="SELECT f FROM FormaPagoTienda f"),
 	@NamedQuery(name="FormaPagoTienda.findById", query="SELECT f FROM FormaPagoTienda f WHERE f.idFormaPagoTienda = :idFormaPagoTienda"),
-	@NamedQuery(name="FormaPagoTienda.findbyIdTienda", query="SELECT f FROM FormaPagoTienda f WHERE f.idTienda = :idTienda")
+	@NamedQuery(name="FormaPagoTienda.findbyIdTienda", query="SELECT f FROM FormaPagoTienda f WHERE f.tienda = :tienda")
 })
 public class FormaPagoTienda implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -23,37 +23,40 @@ public class FormaPagoTienda implements Serializable {
 	@Column(name="id_forma_pago_tienda")
 	private Integer idFormaPagoTienda;
 
-	@Column(name="id_forma_pago")
-	private Integer idFormaPago;
+	@JoinColumn(name="id_forma_pago", referencedColumnName= "id_forma_pago")
+	@ManyToOne
+	private FormaPago formaPago;
 
-	@Column(name="id_tienda")
-	private Integer idTienda;
+	@JoinColumn(name="id_tienda", referencedColumnName="id_tienda")
+	@ManyToOne
+	private Tienda tienda;
 
 	public FormaPagoTienda() {
 	}
 
 	public Integer getIdFormaPagoTienda() {
-		return this.idFormaPagoTienda;
+		return idFormaPagoTienda;
 	}
 
 	public void setIdFormaPagoTienda(Integer idFormaPagoTienda) {
 		this.idFormaPagoTienda = idFormaPagoTienda;
 	}
 
-	public Integer getIdFormaPago() {
-		return this.idFormaPago;
+	public FormaPago getFormaPago() {
+		return formaPago;
 	}
 
-	public void setIdFormaPago(Integer idFormaPago) {
-		this.idFormaPago = idFormaPago;
+	public void setFormaPago(FormaPago formaPago) {
+		this.formaPago = formaPago;
 	}
 
-	public Integer getIdTienda() {
-		return this.idTienda;
+	public Tienda getTienda() {
+		return tienda;
 	}
 
-	public void setIdTienda(Integer idTienda) {
-		this.idTienda = idTienda;
+	public void setTienda(Tienda tienda) {
+		this.tienda = tienda;
 	}
+
 
 }

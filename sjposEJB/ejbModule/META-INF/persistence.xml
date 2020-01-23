@@ -9,12 +9,24 @@
 		<class>sv.com.stjacks.sjpos.entities.Articulo</class>
 		<class>sv.com.stjacks.sjpos.entities.Genero</class>
 		<class>sv.com.stjacks.sjpos.entities.ProductoTienda</class>
-		<class>sv.com.stjacks.sjpos.entities.ProductoVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoDocumentoTienda</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoDocumento</class>
 		<class>sv.com.stjacks.sjpos.entities.Tienda</class>
-		
+		<class>sv.com.stjacks.sjpos.entities.Caja</class>
+		<class>sv.com.stjacks.sjpos.entities.FormaPago</class>
+		<class>sv.com.stjacks.sjpos.entities.Marca</class>
+		<class>sv.com.stjacks.sjpos.entities.ProductoIngreso</class>
+		<class>sv.com.stjacks.sjpos.entities.ProductoPedido</class>
+		<class>sv.com.stjacks.sjpos.entities.ProductoTransferencia</class>
+		<class>sv.com.stjacks.sjpos.entities.Talla</class>
+		<class>sv.com.stjacks.sjpos.entities.Producto</class>
+		<class>sv.com.stjacks.sjpos.entities.Cambio</class>
+		<class>sv.com.stjacks.sjpos.entities.Cliente</class>
+		<class>sv.com.stjacks.sjpos.entities.ProductoVenta</class>
+		<class>sv.com.stjacks.sjpos.entities.PromocionVenta</class>
+		<class>sv.com.stjacks.sjpos.entities.Usuario</class>
+		<class>sv.com.stjacks.sjpos.entities.Venta</class>
 		<properties>
 			<property name="hibernate.connection.pool_size" value="1"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>

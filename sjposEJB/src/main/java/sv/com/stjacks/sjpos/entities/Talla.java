@@ -3,6 +3,7 @@ package sv.com.stjacks.sjpos.entities;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * The persistent class for the talla database table.
@@ -41,7 +42,7 @@ public class Talla implements Serializable {
 	@Column(nullable = false, length = 10)
 	private String talla;
 	
-	@OneToMany(mappedBy = "idTalla")
+	@OneToMany(targetEntity=Producto.class, mappedBy = "talla")
     private List<Producto> productoList;
 
 	public Talla() {
