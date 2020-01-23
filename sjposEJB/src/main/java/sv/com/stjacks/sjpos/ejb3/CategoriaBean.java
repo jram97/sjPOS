@@ -1,22 +1,32 @@
-package sv.com.stjacks.sjpos.ejb3;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package EJB;
 
-import javax.ejb.LocalBean;
+import entities.Categoria;
 import javax.ejb.Stateless;
-
-import sv.com.stjacks.sjpos.entities.Categoria;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
- * Session Bean implementation class CategoriaBean
+ *
+ * @author aguzman
  */
 @Stateless
-@LocalBean
-public class CategoriaBean extends  GenericDAOJpa<Categoria, Integer> implements CategoriaBeanRemote, CategoriaBeanLocal {
+public class CategoriaFacade extends AbstractFacade<Categoria> implements CategoriaFacadeLocal {
 
-    /**
-     * Default constructor. 
-     */
-    public CategoriaBean() {
-        // TODO Auto-generated constructor stub
+    @PersistenceContext(unitName = "sjPOSEJBPU")
+    private EntityManager em;
+
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
     }
 
+    public CategoriaFacade() {
+        super(Categoria.class);
+    }
+    
 }

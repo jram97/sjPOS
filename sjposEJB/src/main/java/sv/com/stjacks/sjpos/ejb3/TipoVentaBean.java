@@ -1,21 +1,32 @@
-package sv.com.stjacks.sjpos.ejb3;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package EJB;
 
-import javax.ejb.LocalBean;
+import entities.TipoVenta;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import sv.com.stjacks.sjpos.entities.TipoVenta;
-
 /**
- * Session Bean implementation class TipoVentaBean
+ *
+ * @author aguzman
  */
 @Stateless
-@LocalBean
-public class TipoVentaBean extends GenericDAOJpa<TipoVenta, Integer> implements TipoVentaBeanRemote, TipoVentaBeanLocal {
+public class TipoVentaFacade extends AbstractFacade<TipoVenta> implements TipoVentaFacadeLocal {
 
-    public TipoVentaBean() {
-        // 
+    @PersistenceContext(unitName = "sjPOSEJBPU")
+    private EntityManager em;
+
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
     }
 
+    public TipoVentaFacade() {
+        super(TipoVenta.class);
+    }
+    
 }

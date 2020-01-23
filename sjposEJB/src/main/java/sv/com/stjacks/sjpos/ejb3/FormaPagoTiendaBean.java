@@ -1,23 +1,32 @@
-package sv.com.stjacks.sjpos.ejb3;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package EJB;
 
-import javax.ejb.LocalBean;
+import entities.FormaPagoTienda;
 import javax.ejb.Stateless;
-
-import sv.com.stjacks.sjpos.entities.FormaPagoTienda;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
- * Session Bean implementation class FormaPagoTiendaBean
+ *
+ * @author aguzman
  */
 @Stateless
-@LocalBean
-public class FormaPagoTiendaBean extends GenericDAOJpa <FormaPagoTienda, Integer> implements FormaPagoTiendaBeanRemote, FormaPagoTiendaBeanLocal {
+public class FormaPagoTiendaFacade extends AbstractFacade<FormaPagoTienda> implements FormaPagoTiendaFacadeLocal {
 
-    /**
-     * Default constructor. 
-     */
-    public FormaPagoTiendaBean() {
-        // TODO Auto-generated constructor stub
+    @PersistenceContext(unitName = "sjPOSEJBPU")
+    private EntityManager em;
+
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+
+    public FormaPagoTiendaFacade() {
+        super(FormaPagoTienda.class);
     }
     
-
 }

@@ -1,18 +1,32 @@
-package sv.com.stjacks.sjpos.ejb3;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package EJB;
 
-import javax.ejb.LocalBean;
+import entities.Cliente;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-
-import sv.com.stjacks.sjpos.entities.Cliente;;
 
 /**
- * Session Bean implementation class ClienteBean
+ *
+ * @author aguzman
  */
 @Stateless
-@LocalBean
-public class ClienteBean extends GenericDAOJpa<Cliente, Integer> implements ClienteBeanRemote, ClienteBeanLocal {
+public class ClienteFacade extends AbstractFacade<Cliente> implements ClienteFacadeLocal {
 
+    @PersistenceContext(unitName = "sjPOSEJBPU")
+    private EntityManager em;
+
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+
+    public ClienteFacade() {
+        super(Cliente.class);
+    }
+    
 }

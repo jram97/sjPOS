@@ -1,24 +1,32 @@
-package sv.com.stjacks.sjpos.ejb3;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package EJB;
 
-import javax.ejb.Local;
-import javax.ejb.LocalBean;
+import entities.Genero;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-
-import sv.com.stjacks.sjpos.entities.Genero;
 
 /**
- * Session Bean implementation class GeneroBean
+ *
+ * @author aguzman
  */
 @Stateless
-@Local(GenericDAOJpa.class)
-@LocalBean
-public class GeneroBean extends GenericDAOJpa<Genero, Integer> implements GeneroBeanRemote, GeneroBeanLocal {
+public class GeneroFacade extends AbstractFacade<Genero> implements GeneroFacadeLocal {
 
-    public GeneroBean() {
-        // TODO Auto-generated constructor stub
+    @PersistenceContext(unitName = "sjPOSEJBPU")
+    private EntityManager em;
+
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
     }
 
+    public GeneroFacade() {
+        super(Genero.class);
+    }
+    
 }

@@ -1,21 +1,32 @@
-package sv.com.stjacks.sjpos.ejb3;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package EJB;
 
-import javax.ejb.LocalBean;
+import entities.ProductoTienda;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import sv.com.stjacks.sjpos.entities.ProductoTienda;
-
 /**
- * Session Bean implementation class ProductoTiendaBean
+ *
+ * @author aguzman
  */
 @Stateless
-@LocalBean
-public class ProductoTiendaBean extends GenericDAOJpa<ProductoTienda, Integer> implements ProductoTiendaBeanRemote, ProductoTiendaBeanLocal {
+public class ProductoTiendaFacade extends AbstractFacade<ProductoTienda> implements ProductoTiendaFacadeLocal {
 
-    public ProductoTiendaBean() {
+    @PersistenceContext(unitName = "sjPOSEJBPU")
+    private EntityManager em;
 
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
     }
 
+    public ProductoTiendaFacade() {
+        super(ProductoTienda.class);
+    }
+    
 }
