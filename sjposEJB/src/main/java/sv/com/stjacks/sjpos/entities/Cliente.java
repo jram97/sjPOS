@@ -55,10 +55,10 @@ public class Cliente implements Serializable {
 	@Column(name="telefono_cli", nullable=false, length=15)
 	private String telefonoCli;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private List<ClientePromocion> clientePromocionList;
 	
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private List<Venta> ventaList;
     
     @JoinColumn(name = "id_tipo_cliente", referencedColumnName = "id_tipo_cliente", nullable = false)
