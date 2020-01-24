@@ -2,7 +2,11 @@ package sv.com.stjacks.sjpos.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import sv.com.stjacks.sjpos.entities.Pedido;
+
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -55,10 +59,10 @@ public class Tienda implements Serializable {
 	@Column(name="telefono_tda", nullable=false, length=15)
 	private String telefonoTda;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<TipoDocumentoTienda> tipoDocumentoTiendaList;
 	
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<FormaPagoTienda> formaPagoTiendaList;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
@@ -77,7 +81,7 @@ public class Tienda implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
     private List<Ingreso> ingresoList;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tienda")
     private List<Caja> cajaList;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTienda")

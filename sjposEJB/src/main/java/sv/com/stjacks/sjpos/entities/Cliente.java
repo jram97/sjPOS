@@ -58,7 +58,7 @@ public class Cliente implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
     private List<ClientePromocion> clientePromocionList;
 	
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private List<Venta> ventaList;
     
     @JoinColumn(name = "id_tipo_cliente", referencedColumnName = "id_tipo_cliente", nullable = false)

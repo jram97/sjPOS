@@ -1,6 +1,8 @@
 package sv.com.stjacks.sjpos.entities;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.*;
 
 
@@ -48,7 +50,7 @@ public class TipoDocumento implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idTipoDocumento")
     private List<TipoDocumentoTienda> tipoDocumentoTiendaList;
 	
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idTipoDocumento")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoDocumento")
     private List<Venta> ventaList;
 
 	public TipoDocumento() {

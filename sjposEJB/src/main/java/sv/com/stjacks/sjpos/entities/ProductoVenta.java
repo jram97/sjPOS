@@ -39,15 +39,15 @@ public class ProductoVenta implements Serializable {
 
 	@JoinColumn(name = "id_producto_tienda", referencedColumnName = "id_producto_tienda", nullable = false)
 	@ManyToOne(optional = false)
-	private ProductoTienda idProductoTienda;
+	private ProductoTienda productoTienda;
 	
 	@JoinColumn(name = "id_promicion", referencedColumnName = "id_promocion")
 	@ManyToOne
-	private Promocion idPromicion;
+	private Promocion promicion;
 	
 	@JoinColumn(name = "id_venta", referencedColumnName = "id_venta", nullable = false)
 	@ManyToOne(optional = false)
-	private Venta idVenta;
+	private Venta venta;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idProductoVenta")
 	private List<ProductoCambio> productoCambioList;
@@ -56,7 +56,7 @@ public class ProductoVenta implements Serializable {
 	}
 
 	public Integer getIdProductoVenta() {
-		return this.idProductoVenta;
+		return idProductoVenta;
 	}
 
 	public void setIdProductoVenta(Integer idProductoVenta) {
@@ -64,7 +64,7 @@ public class ProductoVenta implements Serializable {
 	}
 
 	public Integer getCantidadProdVta() {
-		return this.cantidadProdVta;
+		return cantidadProdVta;
 	}
 
 	public void setCantidadProdVta(Integer cantidadProdVta) {
@@ -72,7 +72,7 @@ public class ProductoVenta implements Serializable {
 	}
 
 	public double getDescuentoProdVta() {
-		return this.descuentoProdVta;
+		return descuentoProdVta;
 	}
 
 	public void setDescuentoProdVta(double descuentoProdVta) {
@@ -80,7 +80,7 @@ public class ProductoVenta implements Serializable {
 	}
 
 	public Boolean getEstadoProdVta() {
-		return this.estadoProdVta;
+		return estadoProdVta;
 	}
 
 	public void setEstadoProdVta(Boolean estadoProdVta) {
@@ -88,35 +88,35 @@ public class ProductoVenta implements Serializable {
 	}
 
 	public double getPrecioProdVta() {
-		return this.precioProdVta;
+		return precioProdVta;
 	}
 
 	public void setPrecioProdVta(double precioProdVta) {
 		this.precioProdVta = precioProdVta;
 	}
 
-	public ProductoTienda getIdProductoTienda() {
-		return idProductoTienda;
+	public ProductoTienda getProductoTienda() {
+		return productoTienda;
 	}
 
-	public void setIdProductoTienda(ProductoTienda idProductoTienda) {
-		this.idProductoTienda = idProductoTienda;
+	public void setProductoTienda(ProductoTienda productoTienda) {
+		this.productoTienda = productoTienda;
 	}
 
-	public Promocion getIdPromicion() {
-		return idPromicion;
+	public Promocion getPromicion() {
+		return promicion;
 	}
 
-	public void setIdPromicion(Promocion idPromicion) {
-		this.idPromicion = idPromicion;
+	public void setPromicion(Promocion promicion) {
+		this.promicion = promicion;
 	}
 
-	public Venta getIdVenta() {
-		return idVenta;
+	public Venta getVenta() {
+		return venta;
 	}
 
-	public void setIdVenta(Venta idVenta) {
-		this.idVenta = idVenta;
+	public void setVenta(Venta venta) {
+		this.venta = venta;
 	}
 
 	public List<ProductoCambio> getProductoCambioList() {

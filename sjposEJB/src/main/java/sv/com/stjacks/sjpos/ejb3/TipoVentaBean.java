@@ -14,14 +14,8 @@ import sv.com.stjacks.sjpos.entities.TipoVenta;
 @LocalBean
 public class TipoVentaBean extends GenericDAOJpa<TipoVenta, Integer> implements TipoVentaBeanRemote, TipoVentaBeanLocal {
 
-	@PersistenceContext(unitName = "sjPOSEJB")
-	private EntityManager em;
-	
-    /**
-     * Default constructor. 
-     */
     public TipoVentaBean() {
-        // TODO Auto-generated constructor stub
+        // 
     }
 
 }
