@@ -9,8 +9,11 @@ import sv.com.stjacks.sjpos.entities.FormaPago;
 */
 @Stateless
 public class FormaPagoBean extends GenericDAOJpa<FormaPago, Integer> implements FormaPagoBeanRemote, FormaPagoBeanLocal {
+
+	public FormaPagoBean(Class<FormaPago> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
     
-    public FormaPagoBean() {
-    }
 
 }

@@ -18,4 +18,9 @@ import sv.com.stjacks.sjpos.entities.Cliente;;
 @LocalBean
 public class ClienteBean extends GenericDAOJpa<Cliente, Integer> implements ClienteBeanRemote, ClienteBeanLocal {
 
+	public ClienteBean(Class<Cliente> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 }

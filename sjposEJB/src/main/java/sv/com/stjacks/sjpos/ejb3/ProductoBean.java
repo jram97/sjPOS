@@ -10,8 +10,10 @@ import sv.com.stjacks.sjpos.entities.Producto;
 @Stateless
 public class ProductoBean extends GenericDAOJpa<Producto, Integer> implements ProductoBeanRemote, ProductoBeanLocal {
 
-    public ProductoBean() {
+	public ProductoBean(Class<Producto> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
 
-    }
 
 }

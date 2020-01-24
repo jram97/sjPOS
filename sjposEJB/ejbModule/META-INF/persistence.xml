@@ -18,10 +18,6 @@
 		<class>sv.com.stjacks.sjpos.entities.TipoVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoDocumento</class>
 		<class>sv.com.stjacks.sjpos.entities.Tienda</class>
-<<<<<<< HEAD
-		<class>sv.com.stjacks.sjpos.entities.Talla</class>
-
-=======
 		<class>sv.com.stjacks.sjpos.entities.Caja</class>
 		<class>sv.com.stjacks.sjpos.entities.FormaPago</class>
 		<class>sv.com.stjacks.sjpos.entities.Marca</class>
@@ -33,7 +29,6 @@
 		<class>sv.com.stjacks.sjpos.entities.Cambio</class>
 		<class>sv.com.stjacks.sjpos.entities.Cliente</class>
 		<class>sv.com.stjacks.sjpos.entities.ProductoVenta</class>
-		<class>sv.com.stjacks.sjpos.entities.Usuario</class>
 		<class>sv.com.stjacks.sjpos.entities.Venta</class>
 		<class>sv.com.stjacks.sjpos.entities.Transferencia</class>
 		<class>sv.com.stjacks.sjpos.entities.Pedido</class>
@@ -49,7 +44,6 @@
 		<class>sv.com.stjacks.sjpos.entities.TipoPromocion</class>
 		<class>sv.com.stjacks.sjpos.entities.PaisParametro</class>
 		<class>sv.com.stjacks.sjpos.entities.Promocion</class>
->>>>>>> e8b289c702bf27c1bd1742ee7bb638f4b7a4307e
 		<properties>
 			<property name="hibernate.connection.pool_size" value="1" />
 			<property name="hibernate.dialect"

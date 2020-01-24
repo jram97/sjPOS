@@ -12,11 +12,10 @@ import sv.com.stjacks.sjpos.entities.Categoria;
 @LocalBean
 public class CategoriaBean extends  GenericDAOJpa<Categoria, Integer> implements CategoriaBeanRemote, CategoriaBeanLocal {
 
-    /**
-     * Default constructor. 
-     */
-    public CategoriaBean() {
-        // TODO Auto-generated constructor stub
-    }
+	public CategoriaBean(Class<Categoria> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 
 }

@@ -12,12 +12,11 @@ import sv.com.stjacks.sjpos.entities.FormaPagoTienda;
 @LocalBean
 public class FormaPagoTiendaBean extends GenericDAOJpa <FormaPagoTienda, Integer> implements FormaPagoTiendaBeanRemote, FormaPagoTiendaBeanLocal {
 
-    /**
-     * Default constructor. 
-     */
-    public FormaPagoTiendaBean() {
-        // TODO Auto-generated constructor stub
-    }
+	public FormaPagoTiendaBean(Class<FormaPagoTienda> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
     
 
 }

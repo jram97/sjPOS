@@ -10,8 +10,10 @@ import sv.com.stjacks.sjpos.entities.Marca;
 @Stateless
 public class MarcaBean extends GenericDAOJpa<Marca, Integer> implements MarcaBeanRemote, MarcaBeanLocal {
 
-    public MarcaBean() {
-    	
-    }
+	public MarcaBean(Class<Marca> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 
 }

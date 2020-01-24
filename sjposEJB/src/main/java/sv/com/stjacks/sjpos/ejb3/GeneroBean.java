@@ -17,8 +17,10 @@ import sv.com.stjacks.sjpos.entities.Genero;
 @LocalBean
 public class GeneroBean extends GenericDAOJpa<Genero, Integer> implements GeneroBeanRemote, GeneroBeanLocal {
 
-    public GeneroBean() {
-        // TODO Auto-generated constructor stub
-    }
+	public GeneroBean(Class<Genero> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 
 }

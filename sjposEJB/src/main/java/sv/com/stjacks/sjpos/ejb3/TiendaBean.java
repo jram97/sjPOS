@@ -18,4 +18,9 @@ import sv.com.stjacks.sjpos.entities.Tienda;;
 @LocalBean
 public class TiendaBean extends GenericDAOJpa<Tienda, Integer> implements TiendaBeanRemote, TiendaBeanLocal {
 
+	public TiendaBean(Class<Tienda> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 }

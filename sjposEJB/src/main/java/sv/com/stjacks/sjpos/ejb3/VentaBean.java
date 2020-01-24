@@ -10,8 +10,9 @@ import sv.com.stjacks.sjpos.entities.Venta;
 @Stateless
 public class VentaBean extends GenericDAOJpa<Venta, Integer> implements VentaBeanRemote, VentaBeanLocal {
 
-    public VentaBean() {
-        
-    }
+	public VentaBean(Class<Venta> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
 
 }

@@ -18,4 +18,9 @@ import sv.com.stjacks.sjpos.entities.ProductoVenta;
 @LocalBean
 public class ProductoVentaBean extends GenericDAOJpa<ProductoVenta, Integer> implements ProductoVentaBeanRemote, ProductoVentaBeanLocal {
 
+	public ProductoVentaBean(Class<ProductoVenta> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 }

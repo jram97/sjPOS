@@ -12,8 +12,10 @@ import sv.com.stjacks.sjpos.entities.Articulo;
 @LocalBean
 public class ArticuloBean extends GenericDAOJpa<Articulo, Integer> implements ArticuloBeanRemote, ArticuloBeanLocal {
 
-    public ArticuloBean() {
-        // TODO Auto-generated constructor stub
-    }
+	public ArticuloBean(Class<Articulo> entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
 
 }
