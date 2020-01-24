@@ -41,8 +41,8 @@ public class Talla implements Serializable {
 	@Column(nullable = false, length = 10)
 	private String talla;
 	
-	@OneToMany(mappedBy = "idTalla")
-    private List<Producto> productoList;
+//	@OneToMany(mappedBy = "idTalla")
+//    private List<Producto> productoList;
 
 	public Talla() {
 	}
@@ -95,13 +95,13 @@ public class Talla implements Serializable {
 		this.talla = talla;
 	}
 
-	public List<Producto> getProductoList() {
-		return productoList;
-	}
-
-	public void setProductoList(List<Producto> productoList) {
-		this.productoList = productoList;
-	}
+//	public List<Producto> getProductoList() {
+//		return productoList;
+//	}
+//
+//	public void setProductoList(List<Producto> productoList) {
+//		this.productoList = productoList;
+//	}
 
 	
 }

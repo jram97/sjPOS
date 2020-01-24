@@ -2,11 +2,14 @@ package sv.com.stjacks.sjpos.ejb3;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
 
 import sv.com.stjacks.sjpos.entities.ProductoVenta;
+
+/**
+ * 
+ * @author cchavez
+ *
+ */
 
 /**
  * Session Bean implementation class ProductoVentaBean
