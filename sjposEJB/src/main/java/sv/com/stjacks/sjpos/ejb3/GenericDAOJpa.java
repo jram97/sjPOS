@@ -1,31 +1,46 @@
 package sv.com.stjacks.sjpos.ejb3;
 
+import java.io.Serializable;
 import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaQuery;
 
 import sv.com.stjacks.sjpos.dao.GenericDAO;
 
-public class GenericDAOJpa<T, K> implements GenericDAO<T, K>{
+@Stateless
+@LocalBean
+public class GenericDAOJpa<T, K> implements Serializable {
 	
 	private final EntityManagerFactory emf;
 	private Class<T> claseDePersistencia;
 	
-	public GenericDAOJpa() {
-		try {
+
+	public GenericDAOJpa(Class<T> entity) {
+		claseDePersistencia = entity;
+//		try {
 			emf = Persistence.createEntityManagerFactory("sjPOSEJB");
-		} catch (Throwable ex) {
-			throw new ExceptionInInitializerError(ex);
-		}
+//		} catch (Throwable ex) {
+//			throw new ExceptionInInitializerError(ex);
+//		}
 	}
 	
+	//@PersistenceContext(unitName = "sjPOSEJB", type = PersistenceContextType.TRANSACTION)
+	public javax.persistence.EntityManager em;
+	
 	public EntityManager getEntityManager() {
-		return emf.createEntityManager();
+		return em;
+//		return emf.createEntityManager();
 	}
 
-	@Override
 	public void insert(T obj) {
 		EntityManager entityManager = null;
 		try {
@@ -39,7 +54,6 @@ public class GenericDAOJpa<T, K> implements GenericDAO<T, K>{
 		}
 	}
 
-	@Override
 	public void update(T obj){
 		EntityManager entityManager = null;
 		try {
@@ -54,7 +68,6 @@ public class GenericDAOJpa<T, K> implements GenericDAO<T, K>{
 		
 	}
 
-	@Override
 	public void delete(T obj){
 		EntityManager entityManager = null;
 		try {
@@ -69,22 +82,25 @@ public class GenericDAOJpa<T, K> implements GenericDAO<T, K>{
 		
 	}
 
-	@Override
 	public List<T> findAll() {
+		System.out.println(claseDePersistencia.getSimpleName());
 		EntityManager entityManager = null;
 		List<T> objList = null;
 		try {
 			entityManager = this.getEntityManager();
-			TypedQuery<T> query = entityManager.createNamedQuery(claseDePersistencia.getName()+".findAll", claseDePersistencia);
+			if(getEntityManager() == null) {
+				System.out.println("Entity manager nulo");
+			}
+			TypedQuery<T> query = entityManager.createNamedQuery(claseDePersistencia.getSimpleName()+".findAll", claseDePersistencia);
 			objList = query.getResultList();
 		}catch (Exception e) {
 			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		return objList;
 	}
 	
 
-	@Override
 	public T get(K id){
 		EntityManager entityManager = null;
 		T obj = null;
