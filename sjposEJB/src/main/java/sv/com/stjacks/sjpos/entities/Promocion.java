@@ -82,13 +82,7 @@ public class Promocion implements Serializable {
     private TipoPromocion idTipoPromocion;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPromocion")
-    private List<ProductoPromocion> productoPromocionList;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPromocion")
     private List<RegistroPromocion> registroPromocionList;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPromocion")
-    private List<ClientePromocion> clientePromocionList;
 
     @OneToMany
     private List<Venta> ventaList;
@@ -207,13 +201,6 @@ public class Promocion implements Serializable {
         this.idTipoPromocion = idTipoPromocion;
     }
 
-    public List<ProductoPromocion> getProductoPromocionList() {
-        return productoPromocionList;
-    }
-
-    public void setProductoPromocionList(List<ProductoPromocion> productoPromocionList) {
-        this.productoPromocionList = productoPromocionList;
-    }
 
     public List<RegistroPromocion> getRegistroPromocionList() {
         return registroPromocionList;
@@ -221,14 +208,6 @@ public class Promocion implements Serializable {
 
     public void setRegistroPromocionList(List<RegistroPromocion> registroPromocionList) {
         this.registroPromocionList = registroPromocionList;
-    }
-
-    public List<ClientePromocion> getClientePromocionList() {
-        return clientePromocionList;
-    }
-
-    public void setClientePromocionList(List<ClientePromocion> clientePromocionList) {
-        this.clientePromocionList = clientePromocionList;
     }
 
     public List<Venta> getVentaList() {

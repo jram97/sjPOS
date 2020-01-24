@@ -52,10 +52,6 @@ public class Salida implements Serializable {
     @Column(name = "destino_sal")
     private String destinoSal;
 
-    @JoinColumn(name = "tipo_salida", referencedColumnName = "id_tipo_salida")
-    @ManyToOne(optional = false)
-    private TipoSalida tipoSalida;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idSalida")
     private List<ProductoSalida> productoSalidaList;
 
@@ -113,15 +109,6 @@ public class Salida implements Serializable {
     public void setDestinoSal(String destinoSal) {
         this.destinoSal = destinoSal;
     }
-
-    public TipoSalida getTipoSalida() {
-        return tipoSalida;
-    }
-
-    public void setTipoSalida(TipoSalida tipoSalida) {
-        this.tipoSalida = tipoSalida;
-    }
-
     public List<ProductoSalida> getProductoSalidaList() {
         return productoSalidaList;
     }

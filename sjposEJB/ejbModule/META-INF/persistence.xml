@@ -24,7 +24,6 @@
 		<class>sv.com.stjacks.sjpos.entities.Cambio</class>
 		<class>sv.com.stjacks.sjpos.entities.Cliente</class>
 		<class>sv.com.stjacks.sjpos.entities.ProductoVenta</class>
-		<class>sv.com.stjacks.sjpos.entities.PromocionVenta</class>
 		<class>sv.com.stjacks.sjpos.entities.Usuario</class>
 		<class>sv.com.stjacks.sjpos.entities.Venta</class>
 		<class>sv.com.stjacks.sjpos.entities.Transferencia</class>
@@ -32,16 +31,13 @@
 		<class>sv.com.stjacks.sjpos.entities.Ingreso</class>
 		<class>sv.com.stjacks.sjpos.entities.RegistroPromocion</class>
 		<class>sv.com.stjacks.sjpos.entities.ProductoSalida</class>
-		<class>sv.com.stjacks.sjpos.entities.ProductoPromocion</class>
 		<class>sv.com.stjacks.sjpos.entities.ProductoCambio</class>
 		<class>sv.com.stjacks.sjpos.entities.Parametro</class>
 		<class>sv.com.stjacks.sjpos.entities.Criterio</class>
-		<class>sv.com.stjacks.sjpos.entities.ClientePromocion</class>
 		<class>sv.com.stjacks.sjpos.entities.Proveedor</class>
 		<class>sv.com.stjacks.sjpos.entities.Salida</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoCambio</class>
 		<class>sv.com.stjacks.sjpos.entities.TipoPromocion</class>
-		<class>sv.com.stjacks.sjpos.entities.TipoSalida</class>
 		<class>sv.com.stjacks.sjpos.entities.PaisParametro</class>
 		<class>sv.com.stjacks.sjpos.entities.Promocion</class>
 		<properties>

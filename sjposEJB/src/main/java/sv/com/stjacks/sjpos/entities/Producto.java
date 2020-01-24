@@ -79,13 +79,13 @@ public class Producto implements Serializable {
     @ManyToOne(optional = true)
     private Talla talla;
     
-    @OneToMany(targetEntity=ProductoTransferencia.class, cascade = CascadeType.ALL, mappedBy = "Producto")
+    @OneToMany(targetEntity=ProductoTransferencia.class, cascade = CascadeType.ALL, mappedBy = "idProducto")
     private List<ProductoTransferencia> productoTransferenciaList;
     
-    @OneToMany(targetEntity=ProductoPedido.class, cascade = CascadeType.ALL, mappedBy = "Producto")
+    @OneToMany(targetEntity=ProductoPedido.class, cascade = CascadeType.ALL, mappedBy = "idProducto")
     private List<ProductoPedido> productoPedidoList;
     
-    @OneToMany(targetEntity=ProductoIngreso.class, cascade = CascadeType.ALL, mappedBy = "Producto")
+    @OneToMany(targetEntity=ProductoIngreso.class, cascade = CascadeType.ALL, mappedBy = "idProducto")
     private List<ProductoIngreso> productoIngresoList;
     
     @OneToMany(targetEntity=ProductoTienda.class, cascade = CascadeType.ALL, mappedBy = "idProducto")

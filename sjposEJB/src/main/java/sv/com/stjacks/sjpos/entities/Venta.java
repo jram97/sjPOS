@@ -58,11 +58,8 @@ public class Venta implements Serializable {
     
     @OneToMany(targetEntity=ProductoVenta.class, cascade = CascadeType.ALL, mappedBy = "venta")
     private List<ProductoVenta> productoVentaList;
-    
-    @OneToMany(targetEntity=PromocionVenta.class, cascade = CascadeType.ALL, mappedBy = "venta")
-    private List<PromocionVenta> promocionVentaList;
-    
-    @OneToMany(targetEntity=Cambio.class, cascade = CascadeType.ALL, mappedBy = "venta")
+   
+    @OneToMany(targetEntity=Cambio.class, cascade = CascadeType.ALL, mappedBy = "idVenta")
     private List<Cambio> cambioList;
     
     @JoinColumn(name = "id_caja", referencedColumnName = "id_caja")
@@ -141,15 +138,6 @@ public class Venta implements Serializable {
 
     public void setProductoVentaList(List<ProductoVenta> productoVentaList) {
         this.productoVentaList = productoVentaList;
-    }
-
-    @XmlTransient
-    public List<PromocionVenta> getPromocionVentaList() {
-        return promocionVentaList;
-    }
-
-    public void setPromocionVentaList(List<PromocionVenta> promocionVentaList) {
-        this.promocionVentaList = promocionVentaList;
     }
 
     @XmlTransient
